@@ -1,16 +1,16 @@
 {
-    "name": "Bruno/hxphp",
+    "name": "Wedding For You",
     "require": {
         "php-activerecord/php-activerecord": "dev-master"
     },
     "authors": [
         {
-            "name": "Bruno Campos Santos",
-            "email": "bruno@hxphp.com.br"
+            "name": "Danielle Silva de Oliveira",
+            "email": "dani.dsoliveira@hotmail.com"
         },
         {
-            "name": "Gilglécio Santos",
-            "email": "gilglecio@hxphp.com.br"
+            "name": "Nathalia Gasparoto Gomes",
+            "email": "naty_sebas@hotmail.com"
         }
     ],
     "autoload": {

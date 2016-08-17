@@ -1,33 +1,4 @@
-<!--<form class="form-horizontal">
-  <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-    <div class="col-sm-6">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    </div>
-  </div>
 
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-6">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-    </div>
-  </div>
-
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-6">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
-    </div>
-  </div>
-</form>-->
 <div class="radio">
   <label class="radio-inline">
     <input type="radio" name="radioButton" value="individual" onclick="verificaPessoa(this.value);"> Pessoa Física
@@ -41,7 +12,50 @@
 
 
 <!--OS CAMPOS PARA CADASTRO DA PESSOA FÍSICA-->
-<div id="individual" style="display:none;">AQUI FICAM OS CAMPOS DA PESSOA FISICA</div>
+<div id="individual" style="display:none;">
+  <h3>Dados da Pessoa Física<hr class="cadPF"></h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Nome:</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Nome Completo">
+      </div>
+      <label for="name" class="col-sm-1 control-label">Sexo:</label>
+      <div class="col-sm-2">
+        <select class="form-control">
+          <option id="female">Feminino</option>
+          <option id="male">Masculino</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address" class="col-sm-2 control-label">Logradouro:</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="address" name="address" placeholder="Endereço">
+      </div>
+      <label for="numberAddress" class="col-sm-1 control-label">Número:</label>
+      <div class="col-sm-1">
+        <input type="text" class="form-control" id="numberAddress" name="numberAddress" placeholder="nº">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Sign in</button>
+      </div>
+    </div>
+  </form>
+</div>
 <!--OS CAMPOS PARA CADASTRO DE PESSOA JURÍDICA-->
 <div id="company" style="display:none;">AQUI FICAM OS CAMPOS DA PESSOA JURIDICA</div>
 
