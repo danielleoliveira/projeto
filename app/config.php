@@ -1,8 +1,18 @@
 <?php
 	//Constantes
 	$configs = new HXPHP\System\Configs\Config;
-
 	$configs->env->add('development');
+	
+	$configs->env->development->baseURI = '/projeto/';
+	
+	$configs->env->development->database->setConnectionData([
+			'driver' => 'mysql',
+			'host' => 'localhost',
+			'user' => 'root',
+			'password' => 'vertrigo',
+			'dbname' => 'projeto',
+			'charset' => 'utf8'
+	]);
 
 	/*
 		//Globais
