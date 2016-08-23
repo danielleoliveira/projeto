@@ -1,66 +1,138 @@
 
-<div class="radio">
+<!--<div class="radio">
   <label class="radio-inline">
     <input type="radio" name="radioButton" value="individual" onclick="verificaPessoa(this.value);"> Pessoa Física
   </label>
   <label class="radio-inline">
     <input type="radio" name="radioButton" value="company" onclick="verificaPessoa(this.value);"> Pessoa Jurídica
   </label>
-</div>
+</div>-->
 
 
 
 
 <!--OS CAMPOS PARA CADASTRO DA PESSOA FÍSICA-->
-<div id="individual" style="display:none;">
-  <h3>Dados da Pessoa Física<hr class="cadPF"></h3>
-  <form class="form-horizontal">
-    <div class="form-group">
-      <label for="name" class="col-sm-2 control-label">Nome:</label>
-      <div class="col-sm-5">
-        <input type="text" class="form-control" id="name" name="name" placeholder="Nome Completo">
-      </div>
-      <label for="name" class="col-sm-1 control-label">Sexo:</label>
-      <div class="col-sm-2">
-        <select class="form-control">
-          <option id="female">Feminino</option>
-          <option id="male">Masculino</option>
-        </select>
+<div id="individual" style="display:inline;">
+  <h2 class="text-center"><strong>Cadastro dos Noivos</strong></h2>
+  <h3>Informações Pessoais<hr class="cadPF"></h3>
+  <form action="<?php echo BASE; ?>/cadastro/cadastrar" method="post">
+    <!--NOME-->
+    <div class="form-group col-sm-9">
+      <label for="nome">Nome Completo:</label>
+      <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo">
+    </div>
+
+    <!--SEXO-->
+    <div class="form-group col-sm-3">
+      <label for="sexo">Sexo:</label>
+      <div class="radio">
+        <label class="radio-inline">
+          <input type="radio" name="sexo" id="sexo" value="0"> Feminino
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="sexo" id="sexo" value="1"> Masculino
+        </label>  
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="address" class="col-sm-2 control-label">Logradouro:</label>
-      <div class="col-sm-6">
-        <input type="text" class="form-control" id="address" name="address" placeholder="Endereço">
-      </div>
-      <label for="numberAddress" class="col-sm-1 control-label">Número:</label>
-      <div class="col-sm-1">
-        <input type="text" class="form-control" id="numberAddress" name="numberAddress" placeholder="nº">
-      </div>
+    <!--CPF-->
+    <div class="form-group col-sm-4">
+      <label for="cpf">CPF:</label>
+      <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF">
+    </div>
+    
+    <!--TELEFONE-->
+    <div class="form-group col-sm-4">
+      <label for="telefone">Telefone para Contato:</label>
+      <input type="tel" class="form-control" name="telefone" id="Telefone" placeholder="Telefone">
+    </div>
+    
+    <!--EMAIL-->
+    <div class="form-group col-sm-4">
+      <label for="email">E-mail:</label>
+      <input type="email" class="form-control" name="email" id="email" placeholder="seunome@servidor.com">
+    </div>
+    
+    <!--Gambiarra para pular linha-->
+    <div class="col-sm-12">
+      <br>
+    </div>
+    <h3>Endereço<hr class="cadPF"></h3>
+    
+    <!--LOGRADOURO-->
+    <div class="form-group col-sm-5">
+      <label for="logradouro">Logradouro:</label>
+      <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="Ex: Rua, Avenida, Rodovia">
+    </div>
+    
+    <!--NÚMERO-->
+    <div class="form-group col-sm-2">
+      <label for="numero">Número:</label>
+      <input type="number" class="form-control" id="numero" name="numero" placeholder="Número">
+    </div>
+    
+    <!--COMPLEMENTO-->
+    <div class="form-group col-sm-2">
+      <label for="complemento">Complemento:</label>
+      <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Ex: Fundos">
+    </div>
+    
+    <!--BAIRRO-->
+    <div class="form-group col-sm-3">
+      <label for="bairro">Bairro:</label>
+      <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
     </div>
 
-    <div class="form-group">
-        <label for="complement" class="col-sm-2 control-label">Complemento:</label>
-        <div class="col-sm-3">
-          <input type="text" class="form-control" id="complement" name="complement" placeholder="Complemento">
-        </div>
+    <!--CEP-->
+    <div class="form-group col-sm-3">
+      <label for="cep">Código Postal:</label>
+      <input type="text" class="form-control" id="cep" name="cep" placeholder="CEP">
     </div>
 
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-6">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Remember me
-          </label>
-        </div>
-      </div>
+    <!--CIDADE-->
+    <div class="form-group col-sm-4">
+      <label for="cidade">Cidade:</label>
+      <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
     </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Sign in</button>
-      </div>
+
+    <!--ESTADO-->
+    <div class="form-group col-sm-3">
+      <label for="estado">Estado:</label>
+      <input type="text" class="form-control" id="estado" name="estado" placeholder="Estado">
     </div>
+
+    <!--UF-->
+    <div class="form-group col-sm-2">
+      <label for="UF">UF:</label>
+      <input type="text" class="form-control" id="UF" name="UF" placeholder="Ex: Brasil">
+    </div>
+
+    <!--Gambiarra para pular linha-->
+    <div class="col-sm-12">
+      <br>
+    </div>
+    <h3>Informações para Acesso<hr class="cadPF"></h3>
+    
+    <!--USERNAME-->
+    <div class="form-group col-sm-4">
+      <label for="username">Nome de Usuário:</label>
+      <input type="text" class="form-control" id="username" name="username">
+    </div>
+    
+    <div class="col-sm-9">
+      
+    </div>
+
+    <!--SENHA-->
+    <div class="form-group col-sm-4">
+      <label for="username">Senha:</label>
+      <input type="password" class="form-control" id="senha" name="senha">
+    </div>
+    <div class="col-sm-12">
+      <button type="submit" class="btn btn-success center-block">Cadastrar</button>  
+    </div>
+    
+
   </form>
 </div>
 <!--OS CAMPOS PARA CADASTRO DE PESSOA JURÍDICA-->
