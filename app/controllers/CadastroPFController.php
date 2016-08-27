@@ -1,6 +1,6 @@
 <?php 
 
-class CadastroController extends \HXPHP\System\Controller
+class CadastroPFController extends \HXPHP\System\Controller
 {
 	public function cadastrarAction()
 	{
@@ -17,9 +17,9 @@ class CadastroController extends \HXPHP\System\Controller
 
 		$cadastrarEndPessoaFisica = EnderecoPF::cadastrar($this->request->post('logradouro', 'numero', 'complemento', 'bairro', 'cep', 'cidade', 'estado', 'uf'));
 
-		$cadastrarPessoa = Pessoa::cadastrar($this->request->post('nome', 'telefone', 'email', 'username', 'senha'));
+		$cadastrarPessoa = Pessoa::cadastrar($this->request->post());
 		
-		$cadastrarPessoaFisica = PessoaFisica::cadastrar($this->request->post('cpf', 'sexo'));
+		$cadastrarPessoaFisica = PessoaFisica::cadastrar($this->request->post());
 		//var_dump($this->request->post());
 	}
 }
